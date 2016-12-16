@@ -5,9 +5,7 @@ var computeMultiplication = function (a, b) {
 };
 
 var formatResult = function (param) {
-  var defer = Q.defer();
-  defer.resolve("[ " + param + " ]");
-  return defer.promise;
+  return Q.when("[ " + param + " ]");
 };
 
 var timesTwo = function (a, b) {
@@ -42,7 +40,7 @@ computeMultiplication(2, 3)
   .then(function(str) {
 
     console.log('output -------> ', str);
-    // output ------->  [ 6 ]
+    // output ------->  [ 12 ]
 
   })
   .then(function() {
