@@ -3,9 +3,7 @@
 let computeMultiplication = (a, b) =>
   timesTwo(a, b)
 
-
 let formatResult = (param) => "[ " + param + " ]";
-
 
 let timesTwo = (a, b) =>
   new Promise((resolve, reject) => {
