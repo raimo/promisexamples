@@ -37,27 +37,30 @@ var multiplyBy = function (coeff) {
 console.log('First Case:');
 
 computeMultiplication(2, 3)
-.then(multiplyBy(2))
-.then(formatResult)
-.then(function(str) {
+  .then(multiplyBy(2))
+  .then(formatResult)
+  .then(function(str) {
 
-  console.log('output -------> ', str);
-  // output ------->  [ 6 ]
+    console.log('output -------> ', str);
+    // output ------->  [ 6 ]
 
-}).then(function() {
-  console.log('Second Case:');
+  })
+  .then(function() {
+    console.log('Second Case:');
 
-  return computeMultiplication(2, 'fail').then(function(str) {
+    return computeMultiplication(2, 'fail')
+           .then(function(str) {
 
-           console.log('output -------> ', str);
+             console.log('output -------> ', str);
 
-         }).catch(function(err) {
+           })
+           .catch(function(err) {
 
-           console.warn('error  -------> ', err);
-           // error  ------->  [Error: ERROR]
+             console.warn('error  -------> ', err);
+             // error  ------->  [Error: ERROR]
 
-         });
-})
-.then(function() {
-  console.log('All done!');
-});
+           });
+  })
+  .then(function() {
+    console.log('All done!');
+  });
