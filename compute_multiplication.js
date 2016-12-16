@@ -1,7 +1,7 @@
 var Q = require('q');
 
 var computeMultiplication = function (a, b) {
-  return timesTwo(a, b)
+  return timesTwo(a, b);
 };
 
 var formatResult = function (param) {

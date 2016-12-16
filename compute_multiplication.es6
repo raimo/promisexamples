@@ -1,7 +1,7 @@
 'use strict';
 
 let computeMultiplication = (a, b) =>
-  timesTwo(a, b)
+  timesTwo(a, b);
 
 let formatResult = (param) => "[ " + param + " ]";
 
